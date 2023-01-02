@@ -21,7 +21,6 @@ img {
 
 .container {
   margin: 0 16px;
-  outline: 2px solid red;
 }
 
 ul {
@@ -72,6 +71,25 @@ header li + li {
   margin-left: 8px;
 }
 
+header form {
+  display: none;
+}
+
+header input,
+header button {
+  all: unset;
+}
+
+header input {
+  border-bottom: 1px solid #aaa;
+  padding: 4px;
+  width: 300px;
+}
+
+header button {
+  cursor: pointer;
+}
+
 /* hero */
 
 .hero img {
@@ -95,7 +113,6 @@ header li + li {
 
 .products li {
   width: calc((100% - 16px) / 2);
-  outline: 2px solid blue;
 }
 
 .products li img {
@@ -148,4 +165,34 @@ footer ul {
 
 footer li + li {
   margin-left: 8px;
+}
+
+/* medium screen */
+
+@media (min-width: 600px) {
+  body {
+    background: pink;
+  }
+
+  .products li {
+    width: calc((100% - 32px) / 3);
+  }
+}
+
+/* large screen */
+
+@media (min-width: 800px) {
+  body {
+    background: skyblue;
+  }
+
+  .container {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  header form {
+    display: block;
+  }
 }
